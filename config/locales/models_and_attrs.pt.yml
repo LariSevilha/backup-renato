@@ -1,0 +1,18 @@
+pt:
+  activerecord:
+    models:
+      video:
+        one: "Video"
+        other: "Videos"
+      header: 
+        one: "Topo"
+        other: "Topo"
+      footer: 
+        one: "Rodapé"
+        other: "Rodapé"
+    attributes:
+      user:
+        name: "Nome"
+        email: "E-mail"
+      video:
+        title: "Titulo"

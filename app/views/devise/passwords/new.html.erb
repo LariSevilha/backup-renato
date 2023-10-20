@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+  <%= render 'layouts/includes/head_devise' %>
+
+  <body class="devise__body">
+    
+
+	<% if resource.present? && resource.errors.present? %>
+	    <% resource.errors.full_messages.each do |erro| %>   
+	       <div id="message" class="">
+	         <%= erro %>
+	       </div> 
+	  <% end %>  
+	<% end %>
+
+
+  	<section class="container">
+  		<h1 class="devise__logo"><%= image_tag('logo.png') %></h1> 
+			<div class="devise__content">
+				<h1 class="devise__title">Recuperar Senha</h1> 
+  
+				<%= form_for(resource, as: resource_name, url: password_path(resource_name), method: :post ) do |f| %>
+				
+				   <%= f.label :email, class: "devise__field" do %>
+				     <div class="">Email cadastrado*</div>
+				     <%= f.text_field :email, required: true, autofocus: true, autocomplete: "email", placeholder: "email@example.com", class: "" %>
+				   <% end %>
+				   
+				   <div class="devise__submit mt-5">
+				     <%= f.submit "Recuperar Senha", class: "devise__btn" %>
+				  </div>
+				<% end %> 
+			</div>
+	        <div class="devise__links">
+				<%= render 'devise/shared/links' %>
+			</div> 
+		</section>
+  </body>
+</html>

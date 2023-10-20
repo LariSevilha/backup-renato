@@ -1,0 +1,148 @@
+
+<div class="container">
+    <div class="container-centralizada">
+    
+        <div class="menu">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#header">Início</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about">Quem sou eu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#video">Meu trabalho</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#services">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://api.whatsapp.com/send?phone=55679997844" target="_blank">Contato</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav> 
+        </div>
+
+        <div id="header" class="container">
+            <% @header.each do |header| %> 
+                <div class="content-wrapper">
+                    <p class="image-container">
+                        <%= image_tag "topo.png", class: "img-responsive header-i mt-5" %>
+                    </p> 
+                    <p class="h-description">
+                        <%= header.description.html_safe %>
+                    </p>
+                </div>
+            <% end %> 
+          </div>
+
+         
+        <div id="about" class="container">
+              <% @about.each do |a| %>
+                <div class="about-cont mb-3 mt-5 d-flex">
+                  <div class="about-text">
+                    <h5 class="about-title">Renato Frutuso</h5>
+                    <p><%= a.description.html_safe %></p>
+                  </div>
+                  <div class="image-container-about">
+                    <%= image_tag 'teste.jpg', class: 'img-fluid larger-image' %>  
+                  </div>
+                </div>
+              <% end %>
+            </div>
+ 
+
+        
+         
+        <div id="video" class="container">
+            <% @video.each do |video| %>
+                <h2 class="text-center"><%= video.title %></h2>
+                <div class="video-container">
+                    <%= image_tag 'lines2.png', class:"img-lines-video" %>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= extract_youtube_video_id(video.url) %>" frameborder="0" allowfullscreen></iframe>
+                </div>
+            <% end %>
+       </div>
+        
+        <div id="services" class="container">
+            <div class="box">
+                <div class="list">
+                    <ul class="ul1">
+                        <li>PLANEJAMENTO DE TREINO</li>
+                        <li>CORREÇÃO POSTURAL</li>
+                        <li>PLANO ALIMENTAR</li> 
+                        <%= image_tag 'img-border.png', class: "img-border" %>
+                        <%= image_tag 'lines2.png', class:"img-lines" %>
+                        <div class="retangle">
+                            <div class="point-elipse">
+                            </div>
+                        </div>
+                        <div class="box-elipse">
+                            <div class="elipse1">
+                                <div class="elipse2">
+                                    <div class="elipse3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+            </div>
+            <div class="list list-2">
+                <ul class="ul2">
+                    <li>SUPLEMENTAÇÃO</li>
+                    <li>CORREÇÃO BIOMECÂNICA DE EXERCÍCIOS</li>
+                    <li>SAÚDE INTESTINAL</li> 
+                    <%= image_tag 'img-border.png', class: "img-border ib-2" %>
+                    <%= image_tag 'lines2.png', class:"img-lines il-2" %>
+                    <div class="retangle ret2">
+                        <div class="point-elipse">
+                        </div>
+                    </div>
+                    <div class="box-elipse be-2">
+                        <div class="elipse1">
+                            <div class="elipse2">
+                                <div class="elipse3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+                
+            </div>
+        </div>
+
+
+        <%#= image_tag 'lines.png', class:"" %>
+        <%#= image_tag 'lines2.png', class:"" %>
+        <%#= image_tag 'img-border.png', class:"" %>
+
+        <footer style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="footer-content">
+                <div class="additional-info">
+                    <div class="copyright">
+                        &copy; <%= Time.now.year %> Todos os direitos reservados
+                    </div>
+                </div>
+            </div>
+            <div class="developer-info">
+                Desenvolvido por: 
+            <a href="https://www.linkedin.com/in/larissa-sevilha-378718217/" target="_blank">
+                <%= image_tag 'ls.png', class: "img-footer" %>
+                </a> 
+            </div>
+        </footer> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=5567999784414&text=Adorei%20seu%20artigo" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px; color:#FFF;border-radius:50px;text-align:center;font-size:30px;z-index:1000;" target="_blank">
+    <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+    </a>
+    </div>
+</div>
