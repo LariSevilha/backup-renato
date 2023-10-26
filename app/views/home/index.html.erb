@@ -1,9 +1,8 @@
 
 <div class="container">
-    <div class="container-centralizada">
-    
+    <div class="container-centralizada"> 
         <div class="menu">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav">
               <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -42,25 +41,21 @@
                     </p>
                 </div>
             <% end %> 
-          </div>
-
+          </div> 
          
-        <div id="about" class="container">
-              <% @about.each do |a| %>
-                <div class="about-cont mb-3 mt-5 d-flex">
-                  <div class="about-text">
-                    <h5 class="about-title">Renato Frutuso</h5>
-                    <p><%= a.description.html_safe %></p>
-                  </div>
-                  <div class="image-container-about">
-                    <%= image_tag 'teste.jpg', class: 'img-fluid larger-image' %>  
-                  </div>
-                </div>
-              <% end %>
+       <div id="about" class="container ab">
+          <% @about.each do |a| %>
+            <div class="about-cont mb-3 mt-5 d-flex flex-column flex-lg-row">
+              <div class="image-container-about col-12 col-lg-6">
+                <%= image_tag 'rf.jpg', class: 'img-fluid larger-image' %>  
+              </div>
+              <div class="about-text">
+                <h5 class="about-title mt-0"><strong>Renato Frutuoso</strong></h5>
+                <p class="mb-0"><%= a.description.html_safe %></p>
+              </div>
             </div>
- 
-
-        
+          <% end %>
+        </div> 
          
         <div id="video" class="container">
             <% @video.each do |video| %>
@@ -118,13 +113,7 @@
             </div>
                 
             </div>
-        </div>
-
-
-        <%#= image_tag 'lines.png', class:"" %>
-        <%#= image_tag 'lines2.png', class:"" %>
-        <%#= image_tag 'img-border.png', class:"" %>
-
+        </div>  
         <footer style="display: flex; justify-content: space-between; align-items: center;">
             <div class="footer-content">
                 <div class="additional-info">
@@ -135,14 +124,15 @@
             </div>
             <div class="developer-info">
                 Desenvolvido por: 
-            <a href="https://www.linkedin.com/in/larissa-sevilha-378718217/" target="_blank">
-                <%= image_tag 'ls.png', class: "img-footer" %>
+            <a href="https://www.linkedin.com/in/larissa-sevilha-378718217/" class="name-footer" target="_blank">
+                <%#= image_tag 'logofooter.png', class: "img-footer" %> 
+                  Larissa Sevilha
                 </a> 
             </div>
         </footer> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://api.whatsapp.com/send?phone=5567999784414&text=Adorei%20seu%20artigo" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px; color:#FFF;border-radius:50px;text-align:center;font-size:30px;z-index:1000;" target="_blank">
-    <i style="margin-top:16px" class="fa fa-whatsapp"></i>
-    </a>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://api.whatsapp.com/send?phone=5567999784414&text=Adorei%20seu%20artigo" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px; color:#FFF;border-radius:50px;text-align:center;font-size:30px;z-index:1000;" target="_blank">
+           <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+        </a>
     </div>
 </div>

@@ -14,15 +14,8 @@
     
   </head>
 
-  <style>
-  
- /* @media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        font-size: 15px;
-    }
-} */
-body{
+<style>
+body {
   background-color: black;
   color: white;
   overflow-x: hidden;
@@ -34,7 +27,16 @@ body{
   justify-content: center;
   align-items: center;
   padding: 20px;
-  gap: 40px
+  gap: 40px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+  .container-centralizada {
+    width: 100%;
+    padding: 0;
+    gap: 0;
+  }
 }
 
 .img-responsive {
@@ -65,25 +67,23 @@ body{
 footer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space between;
   align-items: center;
 }
 
 .img-footer {
-  width: 60px;
+  width: 155px;
 }
 
 .box {
   width: 100%;
-
 }
 
 .list {
   padding: 24px;
   display: flex;
   justify-content: left;
-  margin: 250px 0
-
+  margin: 250px 0;
 }
 
 .list ul {
@@ -106,17 +106,11 @@ footer {
   left: 0;
 }
 
-/* img.ib-2 {
-  left: auto !important;
-  right: 0px !important;
-} */
-
 .img-lines {
   width: 287% !important;
   top: -194px;
   position: absolute;
   left: 288px;
-
 }
 
 .img-lines.il-2 {
@@ -125,14 +119,11 @@ footer {
   right: 390px !important;
   bottom: -72px;
   top: auto;
-
 }
 
 .box-elipse {
   width: 106px;
   height: 106px;
-  /* max-width: 120px;
-  max-height: 120px; */
   border: 1px solid red;
   border-radius: 100px;
   display: flex;
@@ -142,7 +133,6 @@ footer {
   position: absolute;
   right: -316px;
   top: 16px;
-
 }
 
 .box-elipse.be-2 {
@@ -152,13 +142,12 @@ footer {
 .elipse1 {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
+  border: 1px solid white;
   border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 6px;
-
 }
 
 .elipse2 {
@@ -170,19 +159,17 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 8px;
-
 }
 
 .elipse2 {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
+  border: 1px solid white;
   border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 12px;
-
 }
 
 .elipse3 {
@@ -195,7 +182,6 @@ footer {
   align-items: center;
   background: red;
   padding: 12px;
-
 }
 
 .retangle {
@@ -222,19 +208,15 @@ footer {
   background: red;
   top: -6px;
   left: -11px;
-
-
 }
 
 @media (max-width: 768px) {
-  /* .box-elipse, .retangle, .img-lines  {
-    display: none;
-  } */
   footer {
     flex-direction: column;
     font-size: 15px;
   }
-  .img-lines-video {
+
+  .img-lines- vi {
     width: 194%;
     right: -108px;
     top: -13px;
@@ -252,89 +234,93 @@ footer {
   .point-elipse {
     top: 47px;
     left: -7px;
-
   }
+
   .retangle {
     height: 50px;
     border-bottom: none;
     border-right: none;
     border-top: 2px solid red;
     border-left: 2px solid red;
-    right: -14px;
+    right: -4px;
     top: -45px;
-
   }
+
   .retangle.ret2 {
     border-bottom: none;
     border-right: 2px solid red;
     border-top: 2px solid red;
     border-left: none;
-    right: 40px !important;
+    right: 27px !important;
   }
+
   .box-elipse {
-    right: -83px !important;
+    right: -41px !important;
     top: -98px !important;
   }
+
   .retangle.ret2 .point-elipse {
     left: 243px !important;
   }
+
   .box-elipse.be-2 {
-    right: 253px !important;
+    right: 217px !important;
   }
 }
 
-.header-i{
-    width: 364px;
+.header-i {
+  max-width: 364px;
 }
-.image-container-about{
+
+.image-container-about {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.3); /* Adiciona uma sombra vermelha opaca */
-  border-radius: 3%; /* Opcional, se quiser uma sombra circular*/
+  box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.3);
+  border-radius: 3%;
 }
-.about-title{
-  font-family: "Arial",sans-serif;
-  font-size: 30px;
-}
+
 .image-container {
-    text-align: center; /* Alinha o conteúdo do contêiner à direita */
+  text-align: center;
 }
 
 .h-description {
-    text-align: left; /* Alinha o texto à esquerda */
+  text-align: left;
 }
 
 .larger-image {
-  max-width: 500px;
+  max-width: 100%;
   height: auto;
-}
-
-.about-text {
-  text-align: justify;
-  flex: 1;
-  margin-left: 20px;
 }
 
 .about-cont {
   display: flex;
-  flex-direction: column; /* Empilhe os elementos na vertical em dispositivos menores */
-  gap: 32px; /* Adicione espaço entre cada entrada "Sobre" */
+  justify-content: space-between;
+  margin-left: 20px;
+  align-items: flex-start;
 }
 
-@media (min-width: 768px) {
-  .about-cont {
-    flex-direction: row; /* Disponha os elementos em linha em dispositivos maiores */
-     }
+.about-text {
+  text-align: justify;
+  margin-left: 20px;
 }
 
 @media (max-width: 767px) {
   .about-cont {
-    flex-direction: column; /* Empilhe os elementos na vertical em dispositivos móveis */
-    align-items: flex-start; /* Alinhe os elementos à esquerda em dispositivos móveis */
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    gap: 32px;
+  }
+
+  .about-text {
+    margin-left: 0;
   }
 }
 
+.ab {
+  margin: 60px;
+}
 
 .menu {
   background-color: #333;
@@ -364,16 +350,27 @@ footer {
   transition: color 0.3s;
 }
 
-.menu a:hover {
-  color: #ff0000;
+.nav {
+  background: black !important;
 }
 
-  </style>
+.name-footer {
+  color: red;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 8px;
+}
 
-  <body>
+.name-footer:hover {
+  color: red;
+}
 
-    <%= yield %> 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+</style>
+
+<body>
+
+  <%= yield %> 
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
 </html>
