@@ -45,14 +45,13 @@
 
 
        <div id="about" class="container ab text-center">  
-          <a class="botao-consultoria" href="https://api.whatsapp.com/send?phone=5567999784414" target="_blank">Quero solicitar consultoria <i class="fa fa-caret-down" aria-hidden="true"></i></a>
           <% @about.each do |a| %>
             <div class="about-cont mb-3 mt-5 d-flex flex-column flex-lg-row">
               <div class="image-container-about col-12 col-lg-6">
                 <%= image_tag 'teste.jpg', class: 'img-fluid larger-image' %>  
               </div>
               <div class="about-text">
-                <h5 class="about-title mt-0"><strong>MUDE SUA RELAÇÃO COM A ATIVIDADE FÍSICA E ALCANCE SEUS OBJETIVOS DE FORMA PRÁTICA E PRAZEROSA!</strong></h5>
+                <h3 class="about-title mt-0">MUDE SUA RELAÇÃO COM A ATIVIDADE FÍSICA E ALCANCE SEUS OBJETIVOS DE FORMA PRÁTICA E PRAZEROSA!</h3>
                 <p class="mb-0"><%= a.description.html_safe %></p>
               </div>
             </div>
@@ -70,72 +69,120 @@
             <% end %>
        </div>
         
-        <div id="services" class="container">
-            <div class="box">
-                <div class="list">
-                    <ul class="ul1">
-                        <li>PLANEJAMENTO DE TREINO</li>
-                        <li>CORREÇÃO POSTURAL</li>
-                        <li>PLANO ALIMENTAR</li> 
-                        <%= image_tag 'img-border.png', class: "img-border" %>
-                        <%= image_tag 'lines2.png', class:"img-lines" %>
-                        <div class="retangle">
-                            <div class="point-elipse">
-                            </div>
-                        </div>
-                        <div class="box-elipse">
-                            <div class="elipse1">
-                                <div class="elipse2">
-                                    <div class="elipse3">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </ul>
+          
+      <div id="treino" class="container">
+        <div class="row", style="gap:32px; justify-content: center; align-items: center; margin-top: 85px;">
+            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <%= image_tag 'logodevise.png', class: "img-treino" %>
             </div>
-            <div class="list list-2">
-                <ul class="ul2">
-                    <li>SUPLEMENTAÇÃO</li>
-                    <li>CORREÇÃO BIOMECÂNICA DE EXERCÍCIOS</li>
-                    <li>SAÚDE INTESTINAL</li> 
-                    <%= image_tag 'img-border.png', class: "img-border ib-2" %>
-                    <%= image_tag 'lines2.png', class:"img-lines il-2" %>
-                    <div class="retangle ret2">
-                        <div class="point-elipse">
-                        </div>
-                    </div>
-                    <div class="box-elipse be-2">
-                        <div class="elipse1">
-                            <div class="elipse2">
-                                <div class="elipse3">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </ul>
+            <div class="col-md-6">
+                <div class="text-right mt-3">
+                    <h3 class="text-treino">PLANO DE TREINO CRIADO SOMENTE PARA VOCÊ</h3> 
+                    <p>
+                      Planilha de treino de acordo com os seus objetivos, disponibilidade e levando em conta todo o seu histórico de treinamento.                   
+                    </p>
+                </div>
             </div>
-                
+        </div>
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+            <div class="card">
+                <%= image_tag 'img1.jpg', class: "card-img" %>
+                <div class="card-content">
+                    <h5 class="card-title">Hipertrofia</h5>
+                    <p class="card-text">Exercícios básicos e altamente eficientes para gerar o estímulo ideal para hipertrofia. </p>
+                </div>
             </div>
-        </div>  
-        <footer style="display: flex; justify-content: space-between; align-items: center;">
-            <div class="footer-content">
-                <div class="additional-info">
-                    <div class="copyright">
-                        &copy; <%= Time.now.year %> Todos os direitos reservados
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+            <div class="card">
+                <%= image_tag 'img2.jpg', class: "card-img" %>
+                <div class="card-content">
+                    <h5 class="card-title">Emagrecimento</h5>
+                    <p class="card-text">Diminuição de medidas com redução do peso corporal. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+            <div class="card">
+                <%= image_tag 'img3.jpg', class: "card-img" %>
+                <div class="card-content">
+                    <h5 class="card-title">Definição muscular</h5>
+                    <p class="card-text">Uma combinação perfeita entre os exercícios aeróbios e musculação.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<a class="botao-consultoria" href="https://api.whatsapp.com/send?phone=5567999784414" target="_blank">Quero solicitar consultoria <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+<div id="services" class="container">
+  <div class="box">
+    <div class="list">
+        <ul class="ul1">
+            <li>PLANEJAMENTO DE TREINO</li>
+            <li>CORREÇÃO POSTURAL</li>
+            <li>PLANO ALIMENTAR</li> 
+            <%= image_tag 'img-border.png', class: "img-border" %>
+            <%= image_tag 'lines2.png', class:"img-lines" %>
+            <div class="retangle">
+                <div class="point-elipse">
+                </div>
+            </div>
+            <div class="box-elipse">
+                <div class="elipse1">
+                    <div class="elipse2">
+                        <div class="elipse3">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="developer-info">
-                Desenvolvido por: 
-            <a href="https://www.linkedin.com/in/larissa-sevilha-378718217/" class="name-footer" target="_blank">
-                <%#= image_tag 'logofooter.png', class: "img-footer" %> 
-                  Larissa Sevilha
-                </a> 
-            </div>
-        </footer> 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <a href="https://api.whatsapp.com/send?phone=5567999784414&text=Adorei%20seu%20artigo" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px; color:#FFF;border-radius:50px;text-align:center;font-size:30px;z-index:1000;" target="_blank">
-           <i style="margin-top:16px" class="fa fa-whatsapp"></i>
-        </a>
+        </ul>
     </div>
+<div class="list list-2">
+    <ul class="ul2">
+        <li>SUPLEMENTAÇÃO</li>
+        <li>CORREÇÃO BIOMECÂNICA DE EXERCÍCIOS</li>
+        <li>SAÚDE INTESTINAL</li> 
+        <%= image_tag 'img-border.png', class: "img-border ib-2" %>
+        <%= image_tag 'lines2.png', class:"img-lines il-2" %>
+        <div class="retangle ret2">
+            <div class="point-elipse">
+            </div>
+        </div>
+        <div class="box-elipse be-2">
+            <div class="elipse1">
+                <div class="elipse2">
+                    <div class="elipse3">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </ul>
+    </div> 
+  </div>
+</div>  
+    <footer style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="footer-content">
+            <div class="additional-info">
+                <div class="copyright">
+                    &copy; <%= Time.now.year %> Todos os direitos reservados
+                </div>
+            </div>
+        </div>
+        <div class="developer-info">
+            Desenvolvido por: 
+        <a href="https://www.linkedin.com/in/larissa-sevilha-378718217/" class="name-footer" target="_blank">
+            <%#= image_tag 'logofooter.png', class: "img-footer" %> 
+              Larissa Sevilha
+            </a> 
+        </div>
+    </footer> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=5567999784414&text=Adorei%20seu%20artigo" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px; color:#FFF;border-radius:50px;text-align:center;font-size:30px;z-index:1000;" target="_blank">
+       <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+    </a>
+</div>
 </div>
