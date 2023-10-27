@@ -42,24 +42,27 @@
                 </div>
             <% end %> 
           </div> 
-         
-       <div id="about" class="container ab">
+
+
+       <div id="about" class="container ab text-center">  
+          <a class="botao-consultoria" href="https://api.whatsapp.com/send?phone=5567999784414" target="_blank">Quero solicitar consultoria <i class="fa fa-caret-down" aria-hidden="true"></i></a>
           <% @about.each do |a| %>
             <div class="about-cont mb-3 mt-5 d-flex flex-column flex-lg-row">
               <div class="image-container-about col-12 col-lg-6">
-                <%= image_tag 'rf.jpg', class: 'img-fluid larger-image' %>  
+                <%= image_tag 'teste.jpg', class: 'img-fluid larger-image' %>  
               </div>
               <div class="about-text">
-                <h5 class="about-title mt-0"><strong>Renato Frutuoso</strong></h5>
+                <h5 class="about-title mt-0"><strong>MUDE SUA RELAÇÃO COM A ATIVIDADE FÍSICA E ALCANCE SEUS OBJETIVOS DE FORMA PRÁTICA E PRAZEROSA!</strong></h5>
                 <p class="mb-0"><%= a.description.html_safe %></p>
               </div>
             </div>
           <% end %>
-        </div> 
+        </div>
+
          
         <div id="video" class="container">
             <% @video.each do |video| %>
-                <h2 class="text-center"><%= video.title %></h2>
+                <h4 class="text-center"><strong class="video-title">ASSISTA AO VÍDEO</strong> E CONHEÇA UM POUCO MAIS SOBRE A CONSULTORIA</h4>
                 <div class="video-container">
                     <%= image_tag 'lines2.png', class:"img-lines-video" %>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= extract_youtube_video_id(video.url) %>" frameborder="0" allowfullscreen></iframe>
