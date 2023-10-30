@@ -85,7 +85,7 @@ footer {
   padding: 24px;
   display: flex;
   justify-content: left;
-  margin: 250px 0;
+  margin: 115px 0;
 }
 
 .list ul {
@@ -280,6 +280,7 @@ footer {
   align-items: center;
   box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.3);
   border-radius: 3%;
+  width: 395px;
 }
 
 .image-container {
@@ -294,6 +295,12 @@ footer {
   max-width: 100%;
   height: auto;
   border-radius: 3px;
+
+
+}
+.larger-image img{
+    box-shadow: 4px 4px 66px 0px #FFF;
+
 }
 
 .about-cont {
@@ -301,6 +308,7 @@ footer {
   justify-content: space-between;
   margin-left: 20px;
   align-items: flex-start;
+  gap: 44px;
 }
 .about-title{
   color: red;
@@ -326,11 +334,19 @@ footer {
    }
   .about-text {
     margin-left: 0;
-    font-size: 15px;
-    text-
+    font-size: 15px; 
+  }
+  .botao-consultoria{
+    margin-top: 18px;
+    margin-bottom: 80px;
+    
   }
 }
-
+@media (max-width: 767px) {
+  .image-container-about{
+    width: 314px;
+  }
+}
 .ab {
   margin: 60px;
 }
@@ -456,6 +472,29 @@ footer {
   font-weight: bold;
   color: white;
 }
+ 
+.image-hover-effect {
+  position: relative;
+  overflow: hidden;
+  height: 100%; /* Defina a altura desejada para a área de imagem */
+
+}
+
+.image-hover-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  transition: background-color 0.3s;
+  z-index: 1;
+}
+
+.image-hover-effect:hover::before {
+  background-color: rgba(0, 0, 0, 0.1); /* Fundo com 20% de opacidade ao passar o mouse */
+}
+
 </style>
 
 <body>
